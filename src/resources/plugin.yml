@@ -1,0 +1,24 @@
+name: MyTameables
+main: dk.fido2603.mytameables.MyTameables
+author: Fido2603
+version: ${project.version}
+api-version: 1.14
+load: POSTWORLD
+description: Tamed animals but at least 2x better!?
+depend: []
+softdepend: [Vault]
+website: https://github.com/Fido2603/MyTameables
+permissions:
+    mytameables.*:
+        description: Gives access to all MyTameable commands
+        default: false
+        children:
+            mydog.all: true
+    mytameables.all:
+        description: Gives access to all MyTameable commands
+        default: false
+        children:
+            mytameables.teleport: true
+    mytameables.teleport:
+        description: Player's tamed animals will teleport to the player
+        default: true
