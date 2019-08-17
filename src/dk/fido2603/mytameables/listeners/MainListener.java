@@ -42,7 +42,7 @@ public class MainListener implements Listener
 		Entity[] entities = event.getChunk().getEntities();
 		for (Entity e : entities)
 		{
-			if (e != null && e instanceof Sittable && e instanceof Tameable && !isNotSafe)
+			if (e != null && e instanceof Sittable && e instanceof Tameable && !isNotSafe && ((Tameable) e).getOwner() != null && ((Tameable) e).getOwner() instanceof Player)
 			{
 				Sittable sittingEntity = (Sittable) e;
 				Tameable tameableEntity = (Tameable) e;

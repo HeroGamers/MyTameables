@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>dk.fido2603</groupId>
   <artifactId>mytameables</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
   <name>MyTameables</name>
   <description>Teleports your tamed animals to your location upon their chunk-unloading</description>
   <url>https://github.com/Fido2603/MyTameables</url>
