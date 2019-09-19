@@ -21,6 +21,7 @@ public class MyTameables extends JavaPlugin
 	public static Server						server									= null;
 	public boolean								debug									= false;
 	public boolean								expandedSearch							= false;
+	public boolean								teleportOnWorldChange					= true;
 	private static MyTameables					plugin;
 	private static FileConfiguration			config									= null;
 	private static PermissionsManager			permissionsManager						= null;
@@ -142,6 +143,7 @@ public class MyTameables extends JavaPlugin
 		this.debug = config.getBoolean("Settings.Debug", false);
 		this.chatPrefix = config.getString("Settings.ChatPrefix", "MyTameables");
 		this.expandedSearch = config.getBoolean("Settings.ExpandedSearch", false);
+		this.teleportOnWorldChange = config.getBoolean("Settings.TeleportOnWorldChange", true);
 	}
 
 	public void saveSettings()
@@ -149,6 +151,7 @@ public class MyTameables extends JavaPlugin
 		config.set("Settings.Debug", Boolean.valueOf(this.debug));
 		config.set("Settings.ChatPrefix", this.chatPrefix);
 		config.set("Settings.ExpandedSearch", this.expandedSearch);
+		config.set("Settings.TeleportOnWorldChange", this.teleportOnWorldChange);
 
 		saveConfig();
 	}

@@ -49,7 +49,7 @@ public class MainListener implements Listener
 				Player player = (Player) tameableEntity.getOwner();
 				if (player != null && player.isOnline() && MyTameables.getPermissionsManager().hasPermission(player, "mytameables.teleport"))
 				{
-					if (!sittingEntity.isSitting() || !player.getWorld().equals(e.getWorld()))
+					if (!sittingEntity.isSitting() || (!e.getWorld().equals(player.getWorld()) && plugin.teleportOnWorldChange))
 					{
 						Location loc = null;
 						if (safeLocation == null)
